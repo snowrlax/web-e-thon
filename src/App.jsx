@@ -1,13 +1,24 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import { Footer } from './components/Footer'
+import { Navbar } from './components/Navbar'
+import { HomePage } from './pages/HomePage'
+import { Dashboard } from './pages/Dashboard'
 
 function App() {
 
   return (
     <>
-    <div className="">
-      Hello there!  
-    </div>
+    <Navbar />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/mentors' element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
+    <Footer />
       </>
   )
 }
