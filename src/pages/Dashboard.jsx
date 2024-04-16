@@ -7,9 +7,9 @@ export const Dashboard = () => {
             <div className="w-[70%] flex flex-col gap-2">
                 
 
-<MentorCard />
-<MentorCard />
-<MentorCard />
+<MentorCard title={"Startup 1"} description={"fasdfsadfasdfsdfsd"} link={"https://google.com/"}/>
+<MentorCard title={"Startup 2"} description={"hasdfsdafsdgsfsffsdfsadf"} link={"https://www.youtube.com/"} />
+<MentorCard title={"startup 3"}  description={"sdfasdfdsafsdhfsdkjsdfsdkhf"} link={"https://www.ycombinator.com/companies"}/>
 
             </div>
             <div className="">
