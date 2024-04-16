@@ -12,3 +12,26 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Entrepreneur  {
+  id Int @default(autoincrement())
+  name String
+}
+model Mentor {
+  id Int @default(autoincrement())
+  name String
+  specialization String
+  experience_years Int
+}
+
+model Startup {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  title     String  
+  content String
+  stakeholders Entrepreneur[] @relation(fields: [EntrepreneurId], references: [id])
+  EntrepreneurId Int
+  mentors Mentor[] @relation(fields: [mentorId], references: [id])
+  mentorId Int
+  niche String
+}
