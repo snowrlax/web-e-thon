@@ -4,6 +4,7 @@ import './App.css'
 import { Footer } from './components/Footer'
 import { Navbar } from './components/Navbar'
 import { HomePage } from './pages/HomePage'
+import { Dashboard } from './pages/Dashboard'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/dashboard' element={<HomePage />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/login' element={<HomePage />} />
         <Route path='/signup' element={<HomePage />} />
         <Route path='/mentors' element={<HomePage />} />
